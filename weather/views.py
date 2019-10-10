@@ -12,13 +12,13 @@ def home(request):
         data = request.POST.copy()
         if(data.get('city')):
             city = data.get('city')
-            url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid=cd3ed82a0b834e245635bb3bd3c38ae4'
+            url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid=your app id here'
             data = requests.get(url.format(city)).json()
     else:
         objects = Cities.objects.all()
         for object in objects:
             city = object.name
-            url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid=cd3ed82a0b834e245635bb3bd3c38ae4'
+            url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid=your app id here'
             data = requests.get(url.format(city)).json()
             weather = {
                 "city": city,

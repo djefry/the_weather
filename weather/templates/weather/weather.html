@@ -7,6 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+    <style>
+        .flex-container {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .flex-item {
+            width: 18em;
+            margin: 10px;
+            border: 1px solid lightgrey;
+            padding: 15px;
+            border-radius: 5px;
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,15 +58,9 @@
         </div>
     </section>
     <section>
-        <div style="
-            padding:20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap:wrap;
-          ">
+        <div class="flex-container">
             {% for weather in weathers %}
-            <div
-                style="width: 18em; margin: 10px; border: 1px solid lightgrey; padding:15px; border-radius:5px; position:relative;">
+            <div class="flex-item">
                 <article class="media">
                     <div class="media-left">
                         <figure class="image is-50x50">
